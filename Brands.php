@@ -2,25 +2,26 @@
 <html>
 <head>
 	<title>
-		ShitCalc
+		Brands
 	</title>
-	
 </head>
 <body>
+<?php
 
-This is where you enter stuff and cpu does stuff too
+$host = 'localhost';
+$user = 'Radbk';
+$password = 'bankshot';
+$dbname =  'bkdb';
 
-<form action="Brands.php" method="get">
-num1: <input type="number" name="num1">
-<br>
-num2: <input type="number" name="num2">
-<input type="submit">
-</form>
-<br>
 
-<?php echo "this is the sum: ", $_GET["num1"]+$_GET["num2"]?>
+$dsn = 'mysql:host='. $host .';dbname='.$dbname;
 
+$pdo = new PDO($dsn, $user, $password);
+
+$sql = "SELECT * FROM brands;";
+
+?>
+
+<p>Here are the Brands we offer, click on one to see availabilty</p>
 </body>
-
-
 </html>

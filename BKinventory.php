@@ -16,7 +16,7 @@ $dsn = 'mysql:host='. $host .';dbname='.$dbname;
 
 $pdo = new PDO($dsn, $user, $password);
 
-$stmt = $pdo->query('SELECT * FROM inv1');
+$stmt = $pdo->query('SELECT * FROM inventory');
 
 
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
