@@ -1,3 +1,9 @@
+<html><head>
+	Products we have available today:
+<?php echo date('m/d/y');?>
+</head>	
+<br/>
+<br/>
 <?php
 $host = 'localhost';
 $user = 'Radbk';
@@ -14,3 +20,8 @@ $stmt = $pdo->query('SELECT * FROM inventory');
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 	echo $row['Product Name'] .'<br>';
 }
+?>
+
+*created by phpadmin
+<br/>
+</html>

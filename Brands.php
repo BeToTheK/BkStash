@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>
+		ShitCalc
+	</title>
+	
 </head>
 <body>
 
+This is where you enter stuff and cpu does stuff too
 
 <form action="Brands.php" method="get">
 num1: <input type="number" name="num1">
@@ -14,8 +18,9 @@ num2: <input type="number" name="num2">
 </form>
 <br>
 
-<?php echo $_GET["num1"]+$_GET["num2"] ?>
-
+<?php echo "this is the sum: ", $_GET["num1"]+$_GET["num2"]?>
 
 </body>
+
+
 </html>
