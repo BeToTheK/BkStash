@@ -1,9 +1,10 @@
-<html><head>
-	Products we have available today:
-<?php echo date('m/d/y');?>
-</head>	
-<br/>
-<br/>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bkinvtest</title>
+</head>
+<body>
+
 <?php
 
 $host = 'localhost';
@@ -16,14 +17,21 @@ $dsn = 'mysql:host='. $host .';dbname='.$dbname;
 
 $pdo = new PDO($dsn, $user, $password);
 
-$stmt = $pdo->query('SELECT * FROM inv1');
-
+$stmt = $pdo->query("SELECT * FROM inventory"); // fetch data
 
 while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 	echo $row['Product_name'] .'<br>';
+	//echo $row['Price'] .'<br>';
 }
 ?>
 
-*created by phpadmin(bk21)*
-<br/>
+
+
+
+
+
+
+
+
+</body>
 </html>
